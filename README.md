@@ -20,13 +20,13 @@ An internal IT Helpdesk chatbot — runs **100% locally** using Ollama. No data 
 
 ## Roadmap
 
-### Stage 1 — Setup
-- [ ] Install Ollama
-- [ ] Pull llama3 model
-- [ ] Create Python virtual environment with `uv`
-- [ ] Install initial dependencies
-- [ ] Setup project tooling: Justfile, `.pre-commit-config.yaml`, `pyproject.toml` (ruff + mypy config)
-- [ ] Test connection to Ollama from Python (`test_ollama.py`)
+### Stage 1 — Setup ✅
+- [x] Install Ollama
+- [x] Pull llama3 model
+- [x] Create Python virtual environment with `uv`
+- [x] Install initial dependencies
+- [x] Setup project tooling: Justfile, `.pre-commit-config.yaml`, `pyproject.toml` (ruff + mypy config)
+- [x] Test connection to Ollama from Python (`test_ollama.py`)
 
 ### Stage 2 — Basic Chatbot (Terminal)
 - [ ] Call Ollama API from Python
