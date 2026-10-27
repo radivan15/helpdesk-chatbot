@@ -47,19 +47,50 @@ Most IT helpdesk tickets — password resets, VPN access, printer issues — are
 
 ## Folder Structure
 
-not available yet.
+Flat structure for now (Stage 1). A `src/` package comes in Stage 4.
+
+```
+helpdesk-chatbot/
+├── check_ollama.py     # smoke test: can Python reach Ollama?
+├── main.py             # chatbot entry point (built in Stage 2)
+├── pyproject.toml      # project metadata + dependencies
+├── uv.lock             # pinned dependency versions
+├── .python-version     # Python version used by uv
+├── .gitignore
+├── LICENSE
+├── README.md
+└── ROADMAP.md
+```
 
 ---
 
 ## Installation
 
-not available yet.
+Prerequisites: [Ollama](https://ollama.com/download) and [uv](https://docs.astral.sh/uv/).
+
+```powershell
+# 1. Pull the model
+ollama pull gemma3:4b
+
+# 2. Clone the repo and install dependencies (creates .venv from uv.lock)
+git clone https://github.com/radivan15/helpdesk-chatbot.git
+cd helpdesk-chatbot
+uv sync
+```
 
 ---
 
 ## How to Run
 
-not available yet.
+Make sure Ollama is running, then check the connection:
+
+```powershell
+uv run python check_ollama.py
+```
+
+If Ollama is not running, you will get `ConnectionError: Failed to connect to Ollama...`.
+
+The terminal chatbot (`main.py`) will be added in Stage 2.
 
 ---
 

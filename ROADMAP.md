@@ -3,11 +3,11 @@
 Stage-by-stage execution plan.
 
 ### Stage 1 — Setup
-- [ ] Install Ollama
-- [ ] Pull gemma3:4b model
-- [ ] `uv init` — creates `pyproject.toml` (project metadata)
-- [ ] `uv add ollama` — installs the official Ollama client; `.venv/` and `uv.lock` are created automatically
-- [ ] Test connection to Ollama from Python (`check_ollama.py`) — not named `test_*.py` so pytest won't pick it up later
+- [x] Install Ollama
+- [x] Pull gemma3:4b model
+- [x] `uv init` — creates `pyproject.toml` (project metadata)
+- [x] `uv add ollama` — installs the official Ollama client; `.venv/` and `uv.lock` are created automatically
+- [x] Test connection to Ollama from Python (`check_ollama.py`) — not named `test_*.py` so pytest won't pick it up later
 
 Structure stays flat (`main.py`, `check_ollama.py`, `pyproject.toml`) — no `src/` package yet, nothing to split.
 
