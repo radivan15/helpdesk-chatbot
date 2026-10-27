@@ -52,7 +52,7 @@ Flat structure for now (Stage 1). A `src/` package comes in Stage 4.
 ```
 helpdesk-chatbot/
 ├── check_ollama.py     # smoke test: can Python reach Ollama?
-├── main.py             # chatbot entry point (built in Stage 2)
+├── main.py             # terminal chatbot (streaming + history)
 ├── pyproject.toml      # project metadata + dependencies
 ├── uv.lock             # pinned dependency versions
 ├── .python-version     # Python version used by uv
@@ -90,7 +90,18 @@ uv run python check_ollama.py
 
 If Ollama is not running, you will get `ConnectionError: Failed to connect to Ollama...`.
 
-The terminal chatbot (`main.py`) will be added in Stage 2.
+Start the terminal chatbot (type `exit` to quit):
+
+```powershell
+uv run python main.py
+```
+
+```
+You: nama saya rifki
+Bot: Halo Rifki! Senang bertemu denganmu. Ada yang bisa saya bantu hari ini?
+```
+
+Responses stream token by token, and the bot keeps the last 6 messages as context. Error handling and logging are still in progress (Stage 2).
 
 ---
 

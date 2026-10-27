@@ -12,11 +12,11 @@ Stage-by-stage execution plan.
 Structure stays flat (`main.py`, `check_ollama.py`, `pyproject.toml`) — no `src/` package yet, nothing to split.
 
 ### Stage 2 — Basic Chatbot (Terminal)
-- [ ] Call Ollama API from Python
-- [ ] Terminal input, terminal output
-- [ ] Implement streaming response (print token by token instead of waiting for full response)
-- [ ] Chat loop with conversation history (context carried between messages)
-- [ ] Trim history: keep only the last N messages (system prompt always kept) so the conversation never exceeds the model's context window
+- [x] Call Ollama API from Python
+- [x] Terminal input, terminal output
+- [x] Implement streaming response (print token by token instead of waiting for full response)
+- [x] Chat loop with conversation history (context carried between messages)
+- [x] Trim history: keep only the last N messages (system prompt always kept) so the conversation never exceeds the model's context window
 - [ ] Handle errors: Ollama not running, empty input, API failure
 - [ ] Replace `print()` with `loguru` for all logging
 
